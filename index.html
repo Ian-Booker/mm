@@ -1,4 +1,72 @@
 ---
 layout: home
 author_profile: true
+title: Home
+permalink: /
 ---
+
+<div class="header">
+  <h1>MM Portfolio</h1>
+  <pp>A demo underconstruction</p>
+  <a href="#projects" class="btn btn-primary">View My Work</a>
+</div>
+
+<div class="intro-section">
+  <h2>About Me</h2>
+  <p>
+    I’m an experienced Data Architect specializing in AI-powered systems, hybrid cloud solutions, and data-driven insights. With over 20 years of experience, I build scalable and efficient infrastructures that empower organizations to achieve their technical goals.
+  </p>
+  <!-- Optional: Add an image or graphic here -->
+</div>
+
+<div class="projects-section" id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project">
+      <img src="path/to/project-image1.jpg" alt="Project 1 Image">
+      <h3>Project Title 1</h3>
+      <p>A brief description of the project. Explain its purpose and the technologies used.</p>
+      <a href="link-to-project-details" class="btn btn-secondary">Learn More</a>
+    </div>
+    <!-- Project 2 -->
+    <div class="project">
+      <img src="path/to/project-image2.jpg" alt="Project 2 Image">
+      <h3>Project Title 2</h3>
+      <p>A brief description of the project. Explain its purpose and the technologies used.</p>
+      <a href="link-to-project-details" class="btn btn-secondary">Learn More</a>
+    </div>
+    <!-- Add more projects as needed -->
+  </div>
+</div>
+
+<div class="skills-section">
+  <h2>Skills & Technologies</h2>
+  <ul class="skills-list">
+    <li><img src="path/to/python-icon.png" alt="Python"> Python</li>
+    <li><img src="path/to/kubernetes-icon.png" alt="Kubernetes"> Kubernetes</li>
+    <li><img src="path/to/aws-icon.png" alt="AWS"> AWS</li>
+    <!-- Add more skills as needed -->
+  </ul>
+</div>
+
+<!-- Optional: Blog section if you plan to write articles -->
+<div class="blog-preview">
+  <h2>Latest Blog Posts</h2>
+  <ul>
+    {% for post in site.posts limit:3 %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <small>{{ post.date | date: "%B %d, %Y" }}</small>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<footer>
+  <p>© {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+  <p>Follow me: 
+    <a href="https://github.com/your-github" target="_blank">GitHub</a> |
+    <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+  </p>
+</footer>
