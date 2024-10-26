@@ -1,37 +1,68 @@
-/* Copyright comment */
-@import "minimal-mistakes/copyright";
+// Typography
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
 
-/* Variables */
-@import "minimal-mistakes/variables";
+h1, h2, h3 {
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
 
-/* Mixins and functions */
-@import "minimal-mistakes/vendor/breakpoint/breakpoint";
-@include breakpoint-set("to ems", true);
-@import "minimal-mistakes/vendor/magnific-popup/magnific-popup"; // Magnific Popup
-@import "minimal-mistakes/vendor/susy/susy";
-@import "minimal-mistakes/mixins";
+// Color palette
+$primary-color: #007BFF; // Adjust this accent color as preferred
+$text-color: #333;
+$background-color: #ffffff;
 
-/* Core CSS */
-@import "minimal-mistakes/reset";
-@import "minimal-mistakes/base";
-@import "minimal-mistakes/forms";
-@import "minimal-mistakes/tables";
-@import "minimal-mistakes/animations";
+a {
+  color: $primary-color;
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
 
-/* Components */
-@import "minimal-mistakes/buttons";
-@import "minimal-mistakes/notices";
-@import "minimal-mistakes/masthead";
-@import "minimal-mistakes/navigation";
-@import "minimal-mistakes/footer";
-@import "minimal-mistakes/search";
-@import "minimal-mistakes/syntax";
+// Button styling
+.btn-primary {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
 
-/* Utility classes */
-@import "minimal-mistakes/utilities";
+// Section spacing
+.section {
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
 
-/* Layout specific */
-@import "minimal-mistakes/page";
-@import "minimal-mistakes/archive";
-@import "minimal-mistakes/sidebar";
-@import "minimal-mistakes/print";
+// Project grid styling
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.project {
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Footer styling
+footer {
+  background-color: $background-color;
+  color: $text-color;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+}
